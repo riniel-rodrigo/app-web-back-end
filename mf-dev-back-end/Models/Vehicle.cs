@@ -10,15 +10,19 @@ namespace mf_dev_back_end.Models
         public int Id { get; set; }
 
         [Required (ErrorMessage = "Este campo é obrigatório.")]
+        [Display (Name = "Nome")]
         public int Name { get; set; }
 
         [Required(ErrorMessage = "Este campo é obrigatório.")]
+        [Display (Name = "Placa")]
         public int Plate { get; set; }
 
         [Required(ErrorMessage = "Este campo é obrigatório.")]
+        [Display(Name = "Ano de Fabricação")]
         public int YearFabrication { get; set; }
 
         [Required(ErrorMessage = "Este campo é obrigatório.")]
+        [Display (Name= "Ano do Modelo")]
         public int YearModel { get; set; }
     }
 }
