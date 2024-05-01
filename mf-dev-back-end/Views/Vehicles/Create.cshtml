@@ -1,0 +1,43 @@
+﻿@model mf_dev_back_end.Models.Vehicle
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Adicionar veículo</h2>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Plate" class="control-label"></label>
+                <input asp-for="Plate" class="form-control" />
+                <span asp-validation-for="Plate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="YearFabrication" class="control-label"></label>
+                <input asp-for="YearFabrication" class="form-control" />
+                <span asp-validation-for="YearFabrication" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="YearModel" class="control-label"></label>
+                <input asp-for="YearModel" class="form-control" />
+                <span asp-validation-for="YearModel" class="text-danger"></span>
+            </div>
+            <div class="form-group d-flex justify-content-between">
+                <input type="submit" value="Adicionar" class="btn btn-primary" />
+                <a class="btn btn-secondary" asp-action="Index"><i class="bi bi-arrow-return-left"></i> Voltar</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

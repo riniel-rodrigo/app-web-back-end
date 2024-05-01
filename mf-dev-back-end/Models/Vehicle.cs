@@ -11,11 +11,11 @@ namespace mf_dev_back_end.Models
 
         [Required (ErrorMessage = "Este campo é obrigatório.")]
         [Display (Name = "Nome")]
-        public int Name { get; set; }
+        public string Name { get; set; }
 
         [Required(ErrorMessage = "Este campo é obrigatório.")]
         [Display (Name = "Placa")]
-        public int Plate { get; set; }
+        public string Plate { get; set; }
 
         [Required(ErrorMessage = "Este campo é obrigatório.")]
         [Display(Name = "Ano de Fabricação")]

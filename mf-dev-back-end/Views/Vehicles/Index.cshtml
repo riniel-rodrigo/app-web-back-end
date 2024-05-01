@@ -4,12 +4,16 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<div>
+    <h1>Lista de carros</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
+    <p class="align-self-end">
+        <a class="btn btn-primary" asp-action="Create">Adicionar carro <i class="bi bi-plus-circle"></i> </a>
+    </p>
+
+</div>
+
+<table class="table table-striped">
     <thead>
         <tr>
             <th>
@@ -18,12 +22,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.Plate)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.YearFabrication)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.YearModel)
-            </th>
+
             <th></th>
         </tr>
     </thead>
@@ -37,15 +36,9 @@
                 @Html.DisplayFor(modelItem => item.Plate)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.YearFabrication)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.YearModel)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    <a class="btn btn-primary btn-sm" asp-action="Edit" asp-route-id="@item.Id"> <i class="bi bi-pencil-square"></i> Editar</a> |
+                    <a class="btn btn-success btn-sm" asp-action="Details" asp-route-id="@item.Id"> <i class="bi bi-info-square"></i> Detalhes</a> |
+                    <a class="btn btn-danger btn-sm" asp-action="Delete" asp-route-id="@item.Id"> <i class="bi bi-trash"></i> Deletar</a>
             </td>
         </tr>
 }
